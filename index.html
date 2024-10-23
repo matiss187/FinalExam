@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="container">
-            <img src="pictures/16.jpg" alt="Matīss Gargurns" class="header-picture"> <!-- Added image -->
+            <img src="pictures/16.jpg" alt="Matīss Gargurns" class="header-picture">
             <h1>Matīss Gargurns</h1>
             <p>Professional Truck Driver | Logistics Expert</p>
         </div>
@@ -22,7 +22,7 @@
             <li><a href="#about">About Me</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#skills">Skills</a></li>
-            <li><a href="#gallery">Gallery</a></li> <!-- Added Gallery Link -->
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -43,7 +43,7 @@
                 <h3>Company Name 2 (20XX - Present)</h3>
                 <p>Job Description: Responsible for local deliveries, maintaining a high customer satisfaction rate. Utilized advanced GPS systems and optimized fuel efficiency.</p>
             </div>
-            <!-- Add more job experiences as needed -->
+
         </section>
 
         <section id="skills" class="container">
@@ -74,7 +74,7 @@
                 <img src="pictures/13.jpg" alt="trucking13" onclick="openModal(this, 11)" />
                 <img src="pictures/14.jpg" alt="trucking14" onclick="openModal(this, 12)" />
                 <img src="pictures/15.jpg" alt="trucking15" onclick="openModal(this, 13)" />
-                <!-- Add more images as needed -->
+
             </div>
         </section>
 
@@ -90,7 +90,7 @@
         <p>&copy; 2024 Matīss Gargurns. All Rights Reserved.</p>
     </footer>
 
-    <!-- Lightbox Modal -->
+
     <div id="lightbox-modal" class="lightbox-modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
@@ -101,7 +101,7 @@
     </div>
 
     <script>
-        let currentIndex = 0; // Track the current image index
+        let currentIndex = 0;
         const images = [
             "pictures/2.jpg",
             "pictures/3.jpg",
@@ -118,25 +118,24 @@
             "pictures/15.jpg"
         ];
 
-        // Open Modal
+
         function openModal(image, index) {
-            currentIndex = index; // Set current index
+            currentIndex = index;
             document.getElementById("lightbox-modal").style.display = "block";
             document.getElementById("lightbox-img").src = image.src;
         }
 
-        // Change Image
         function changeImage(direction) {
             currentIndex += direction;
             if (currentIndex < 0) {
-                currentIndex = images.length - 1; // Wrap to last image
+                currentIndex = images.length - 1;
             } else if (currentIndex >= images.length) {
-                currentIndex = 0; // Wrap to first image
+                currentIndex = 0;
             }
             document.getElementById("lightbox-img").src = images[currentIndex];
         }
 
-        // Close Modal
+
         function closeModal() {
             document.getElementById("lightbox-modal").style.display = "none";
         }

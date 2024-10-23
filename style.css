@@ -1,25 +1,25 @@
-/* General Styles */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.3s ease-in-out; /* Smooth transitions for all elements */
+    transition: all 0.3s ease-in-out;
 }
 
 body {
     font-family: 'Arial', sans-serif;
     color: #333;
-    line-height: 1.75; /* Increased line height for better readability */
-    background-image: url('pictures/kenworth.jpg'); /* Background image */
+    line-height: 1.75;
+    background-image: url('pictures/kenworth.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Keeps background fixed when scrolling */
+    background-attachment: fixed;
     position: relative;
 }
 header h1 {
-    font-family: 'Oswald', sans-serif; /* Use a custom font for the name */
+    font-family: 'Oswald', sans-serif;
 }
-/* Adding an overlay for transparency */
+
 body::before {
     content: '';
     position: absolute;
@@ -27,7 +27,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(233, 239, 236, 0.5); /* 50% overlay for contrast */
+    background-color: rgba(233, 239, 236, 0.5);
     z-index: -1;
 }
 
@@ -39,54 +39,51 @@ body::before {
     z-index: 1;
 }
 
-/* Updated Color Palette */
 :root {
-    --color-1: #16423C; /* Dark teal */
-    --color-2: #6A9C89; /* Soft green */
-    --color-3: #C4DAD2; /* Light greyish green */
-    --color-4: #E9EFEC; /* Light pastel green */
+    --color-1: #16423C;
+    --color-2: #6A9C89;
+    --color-3: #C4DAD2;
+    --color-4: #E9EFEC;
 }
 
-/* Header */
 header {
-    background: linear-gradient(135deg, var(--color-4), var(--color-2)); /* Gradient from light pastel green to soft green */
-    color: var(--color-1); /* Dark teal for text */
+    background: linear-gradient(135deg, var(--color-4), var(--color-2));
+    color: var(--color-1);
     padding: 50px 0;
     text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Adds shadow for depth */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 header h1 {
-    font-size: 4em; /* Increased font size for prominence */
+    font-size: 4em;
     text-transform: uppercase;
-    letter-spacing: 3px; /* Increased letter spacing for a modern look */
-    font-weight: bold; /* Make it bold */
-    background: linear-gradient(135deg, var(--color-1), var(--color-2)); /* Gradient effect */
-    -webkit-background-clip: text; /* Makes the text transparent to show gradient */
-    -webkit-text-fill-color: transparent; /* Fills the text with the gradient */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    letter-spacing: 3px;
+    font-weight: bold;
+    background: linear-gradient(135deg, var(--color-1), var(--color-2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
 header h1:hover {
-    transform: scale(1.1); /* Slightly scale up on hover for emphasis */
+    transform: scale(1.1);
 }
 
 header p {
-    font-size: 1.4em; /* Increased font size */
+    font-size: 1.4em;
     margin-top: 10px;
-    color: var(--color-1); /* Dark teal for softer look */
+    color: var(--color-1);
 }
 
-/* Navigation */
 nav ul {
     display: flex;
     justify-content: center;
-    background-color: var(--color-1); /* Dark teal */
+    background-color: var(--color-1);
     list-style: none;
     padding: 15px;
-    border-bottom: 3px solid var(--color-2); /* Soft green border */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adds a shadow */
+    border-bottom: 3px solid var(--color-2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 nav ul li {
@@ -94,116 +91,110 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--color-4); /* Light pastel green for links */
+    color: var(--color-4);
     text-decoration: none;
-    font-size: 1.2em; /* Slightly larger font */
+    font-size: 1.2em;
     text-transform: uppercase;
-    font-weight: bold; /* Bold text for better visibility */
-    transition: color 0.3s, text-shadow 0.3s; /* Smooth color and shadow transition */
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
 }
 
 nav ul li a:hover {
-    color: var(--color-3); /* Light greyish green hover effect */
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Text shadow effect */
-}
+    color: var(--color-3);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 
-/* Section Titles */
 h2 {
     text-align: center;
-    font-size: 2.8em; /* Increased font size */
-    color: var(--color-2); /* Soft green for titles */
+    font-size: 2.8em;
+    color: var(--color-2);
     margin-bottom: 20px;
-    text-shadow: 2px 4px rgba(0, 0, 0, 0.15); /* Add text shadow */
+    text-shadow: 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-/* Section Paragraphs */
 p {
     text-align: center;
-    font-size: 1.2em; /* Increased font size */
-    color: #333; /* Darker text for better contrast */
+    font-size: 1.2em;
+    color: #333;
 }
 
-/* Experience Section */
 .experience {
-    background-color: var(--color-3); /* Light greyish green background */
-    border: 1px solid var(--color-2); /* Soft green border */
-    padding: 25px; /* Increased padding */
+    background-color: var(--color-3);
+    border: 1px solid var(--color-2);
+    padding: 25px;
     margin-bottom: 20px;
-    border-radius: 10px; /* Rounded corners for a modern look */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Card shadow effect */
-    transition: transform 0.3s; /* Transition for hover effect */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
 }
 
 .experience:hover {
-    transform: scale(1.05); /* Slight scale effect on hover */
+    transform: scale(1.05);
 }
 
 .experience h3 {
-    font-size: 1.8em; /* Increased font size */
-    color: var(--color-1); /* Dark teal */
-    font-weight: bold; /* Bold weight for emphasis */
+    font-size: 1.8em;
+    color: var(--color-1);
+    font-weight: bold;
 }
 
 .experience p {
-    font-size: 1.2em; /* Increased font size */
+    font-size: 1.2em;
     color: #555;
 }
 
-/* Contact Section */
+
 section#contact p {
     text-align: center;
-    font-size: 1.2em; /* Increased font size */
+    font-size: 1.2em;
     margin-bottom: 10px;
 }
 
 section#contact a {
-    color: var(--color-1); /* Dark teal for contact links */
+    color: var(--color-1);
     text-decoration: none;
 }
 
 section#contact a:hover {
-    color: var(--color-3); /* Light greyish green hover */
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Hover shadow effect */
+    color: var(--color-3);
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
-/* Buttons */
+
 button {
-    padding: 12px 24px; /* Increased button padding */
-    background-color: var(--color-2); /* Soft green for buttons */
-    color: var(--color-4); /* Light pastel green for button text */
+    padding: 12px 24px;
+    background-color: var(--color-2);
+    color: var(--color-4);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Button shadow */
-    font-size: 1.2em; /* Increased font size */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions for hover effects */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 button:hover {
-    background-color: var(--color-3); /* Light greyish green on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Hover shadow for depth */
-    transform: translateY(-3px); /* Lift effect on hover */
+    background-color: var(--color-3);
+    transform: translateY(-3px);
 }
 
-/* Footer */
 footer {
-    background-color: var(--color-1); /* Dark teal for footer */
-    color: var(--color-4); /* Light pastel green for footer text */
+    background-color: var(--color-1);
+    color: var(--color-4);
     text-align: center;
     padding: 20px 0;
     margin-top: 20px;
-    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.15); /* Footer shadow */
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.15);
 }
 
 footer p {
-    font-size: 1em; /* Slightly larger font size */
+    font-size: 1em;
 }
 
-/* Add smooth scroll */
+
 html {
     scroll-behavior: smooth;
 }
-/* Gallery Styles */
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -214,63 +205,63 @@ html {
 .gallery img {
     width: 100%;
     height: auto;
-    border-radius: 10px; /* Rounded corners for images */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
-    transform: scale(1.05); /* Zoom effect on hover */
+    transform: scale(1.05);
 }
-/* Profile Picture in Header */
+
 .header-picture {
-    width: 300px; /* Adjusted size to be noticeable but not too large */
-    height: 300px;
-    border-radius: 50%; /* Makes the image perfectly circular */
-    object-fit: cover; /* Ensures the image fits perfectly inside the circle */
-    border: 6px solid rgba(255, 255, 255, 0.8); /* Add a semi-transparent white border */
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid rgba(255, 255, 255, 0.8);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 
-                0 6px 6px rgba(0, 0, 0, 0.2); /* Deep shadow effect for depth */
-    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transitions */
+                0 6px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
     position: relative;
     z-index: 10;
-    margin: 0 auto 20px; /* Center image and add margin at the bottom */
-    display: block; /* Center image */
+    margin: 0 auto 20px;
+    display: block;
 }
 
-/* Hover effect for the picture */
+
 .header-picture:hover {
-    transform: scale(1.1) rotate(5deg); /* Slight rotation and scaling on hover */
+    transform: scale(1.1) rotate(5deg);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 
-                0 8px 8px rgba(0, 0, 0, 0.25); /* Enhanced shadow on hover */
+                0 8px 8px rgba(0, 0, 0, 0.25);
 }
 
-/* Floating Effect for Cool Look */
+
 @keyframes float {
     0%, 100% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); /* Floating upward effect */
+        transform: translateY(-10px);
     }
 }
 
 .header-picture {
-    animation: float 6s ease-in-out infinite; /* Slow floating effect */
+    animation: float 6s ease-in-out infinite;
 }
 
-/* General Responsive Styles */
+
 @media (max-width: 768px) {
-    /* For tablets and small desktops */
+
     .header-picture {
         width: 120px;
         height: 120px;
-        top: 15px; /* Adjust position for smaller screens */
+        top: 15px;
         left: 15px;
     }
 
     header h1 {
-        font-size: 3em; /* Reduce font size */
+        font-size: 3em;
     }
 
     header p {
@@ -278,26 +269,26 @@ html {
     }
     
     nav ul {
-        flex-direction: column; /* Stack nav items vertically on smaller screens */
+        flex-direction: column;
         padding: 10px;
     }
 
     nav ul li {
-        margin: 10px 0; /* Adjust margin for vertically stacked nav items */
+        margin: 10px 0;
     }
 }
 
 @media (max-width: 480px) {
-    /* For mobile devices */
+
     .header-picture {
         width: 100px;
         height: 100px;
         top: 10px;
-        left: 10px; /* Adjust picture size and position for mobile */
+        left: 10px;
     }
 
     header h1 {
-        font-size: 2em; /* Further reduce font size for mobile */
+        font-size: 2em;
     }
 
     header p {
@@ -315,33 +306,34 @@ html {
 
     .container {
         width: 100%;
-        padding: 10px; /* Reduce padding on mobile */
+        padding: 10px;
     }
 
     .experience {
-        padding: 15px; /* Reduce padding on experience cards for mobile */
+        padding: 15px;
     }
 }
-/* Lightbox Modal */
+
 .lightbox-modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 10; /* Sit on top */
-    padding-top: 60px; /* Location of the box */
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 60px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Black background with transparency */
-    overflow: hidden; /* Prevent scrolling */
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: hidden;
 }
 
 .lightbox-content {
     margin: auto;
     display: block;
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Prevent overflow */
-    max-height: 80%; /* Limit height */
+    width: original;
+    height: auto;
+    max-width: 100%;
+    max-height: 80%;
 }
 
 .lightbox-modal .close {
@@ -364,7 +356,7 @@ html {
 }
 
 .nav-button {
-    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    background-color: rgba(255, 255, 255, 0.7);
     border: none;
     color: black;
     padding: 12px;
@@ -373,5 +365,5 @@ html {
 }
 
 .nav-button:hover {
-    background-color: rgba(255, 255, 255, 1); /* Solid background on hover */
+    background-color: rgba(255, 255, 255, 1);
 }
