@@ -90,7 +90,6 @@
         <p>&copy; 2024 Matīss Gargurns. All Rights Reserved.</p>
     </footer>
 
-
     <div id="lightbox-modal" class="lightbox-modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
@@ -113,11 +112,11 @@
             "pictures/9.jpg",
             "pictures/10.jpg",
             "pictures/11.jpg",
+            "pictures/12.jpg",
             "pictures/13.jpg",
             "pictures/14.jpg",
             "pictures/15.jpg"
         ];
-
 
         function openModal(image, index) {
             currentIndex = index;
@@ -134,7 +133,6 @@
             }
             document.getElementById("lightbox-img").src = images[currentIndex];
         }
-
 
         function closeModal() {
             document.getElementById("lightbox-modal").style.display = "none";
