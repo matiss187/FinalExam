@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Matīss Gargurns - Truck Driver Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="pictures/16.jpg" alt="Matīss Gargurns" class="header-picture"> <!-- Added image -->
+            <h1>Matīss Gargurns</h1>
+            <p>Professional Truck Driver | Logistics Expert</p>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#gallery">Gallery</a></li> <!-- Added Gallery Link -->
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <p>Experienced truck driver with over 8 years in long-haul and regional transportation in Europe. I specialize in safe, on-time deliveries and have extensive knowledge of the logistics and supply chain industry.</p>
+        </section>
+
+        <section id="experience" class="container">
+            <h2>Experience</h2>
+            <div class="experience">
+                <h3>Company Name 1 (20XX - 20XX)</h3>
+                <p>Job Description: Handled long-haul freight across multiple states, ensuring safe and timely delivery of goods. Managed load securing and route planning.</p>
+            </div>
+            <div class="experience">
+                <h3>Company Name 2 (20XX - Present)</h3>
+                <p>Job Description: Responsible for local deliveries, maintaining a high customer satisfaction rate. Utilized advanced GPS systems and optimized fuel efficiency.</p>
+            </div>
+            <!-- Add more job experiences as needed -->
+        </section>
+
+        <section id="skills" class="container">
+            <h2>Skills</h2>
+            <ul>
+                <li>Defensive Driving</li>
+                <li>Logistics Management</li>
+                <li>Load Securement</li>
+                <li>GPS Navigation</li>
+                <li>Vehicle Maintenance</li>
+            </ul>
+        </section>
+
+        <section id="gallery" class="container">
+            <h2>Gallery</h2>
+            <p>Here are some pictures from my trucking journeys:</p>
+            <div class="gallery">
+                <img src="pictures/2.jpg" alt="New truck" onclick="openModal(this, 0)" />
+                <img src="pictures/3.jpg" alt="Winter" onclick="openModal(this, 1)" />
+                <img src="pictures/4.jpg" alt="truck at service" onclick="openModal(this, 2)" />
+                <img src="pictures/5.jpg" alt="Truck at Neetherlands" onclick="openModal(this, 3)" />
+                <img src="pictures/6.jpg" alt="trucking6" onclick="openModal(this, 4)" />
+                <img src="pictures/7.jpg" alt="trucking7" onclick="openModal(this, 5)" />
+                <img src="pictures/8.jpg" alt="trucking8" onclick="openModal(this, 6)" />
+                <img src="pictures/9.jpg" alt="trucking9" onclick="openModal(this, 7)" />
+                <img src="pictures/10.jpg" alt="trucking10" onclick="openModal(this, 8)" />
+                <img src="pictures/11.jpg" alt="trucking11" onclick="openModal(this, 9)" />
+                <img src="pictures/13.jpg" alt="trucking13" onclick="openModal(this, 11)" />
+                <img src="pictures/14.jpg" alt="trucking14" onclick="openModal(this, 12)" />
+                <img src="pictures/15.jpg" alt="trucking15" onclick="openModal(this, 13)" />
+                <!-- Add more images as needed -->
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:matiss187@gmail.com">matiss187@gmail.com</a></p>
+            <p>Phone: <a href="tel:+37120270731">+37120270731</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/yourname" target="_blank">linkedin.com/in/yourname</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Matīss Gargurns. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+        <div class="lightbox-navigation">
+            <button class="nav-button" id="prevBtn" onclick="changeImage(-1)">&#10094;</button>
+            <button class="nav-button" id="nextBtn" onclick="changeImage(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0; // Track the current image index
+        const images = [
+            "pictures/2.jpg",
+            "pictures/3.jpg",
+            "pictures/4.jpg",
+            "pictures/5.jpg",
+            "pictures/6.jpg",
+            "pictures/7.jpg",
+            "pictures/8.jpg",
+            "pictures/9.jpg",
+            "pictures/10.jpg",
+            "pictures/11.jpg",
+            "pictures/13.jpg",
+            "pictures/14.jpg",
+            "pictures/15.jpg"
+        ];
+
+        // Open Modal
+        function openModal(image, index) {
+            currentIndex = index; // Set current index
+            document.getElementById("lightbox-modal").style.display = "block";
+            document.getElementById("lightbox-img").src = image.src;
+        }
+
+        // Change Image
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1; // Wrap to last image
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0; // Wrap to first image
+            }
+            document.getElementById("lightbox-img").src = images[currentIndex];
+        }
+
+        // Close Modal
+        function closeModal() {
+            document.getElementById("lightbox-modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
